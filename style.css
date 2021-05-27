@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+:root{
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+html{
+    box-sizing: border-box;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color:var(--White);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Spartan",sans-serif;
+    font-size: 15px;
+    background: url(./images/bg-pattern-top-desktop.svg) no-repeat -60px 0px,
+    url(./images/bg-pattern-bottom-desktop.svg)no-repeat 260px 20px;
+}
+h1{
+    font-size: 40px;
+    color: var(--Very-Dark-Magenta);
+    margin: 1rem 0;
+    line-height: 1;
+}
+p{
+    color: var(--Dark-Grayish-Magenta);
+    line-height: 2;
+    font-weight: 500;
+    font-size: 12px;
+    margin: 0;
+}
+main{
+    width: 1000px;
+    max-width: 100%;
+}
+.container-flex{
+    display:flex;
+
+}
+.container-1{
+    gap:3rem;
+    margin-bottom: 2rem;
+}
+
+.container-2{
+    gap: 1.5rem;
+ 
+    display: flex;
+    min-height:220px;  
+}
+.container-content{
+    width:50%;
+    margin: auto 0 ;
+    padding:1rem 6rem 1rem 0;
+}
+.container-content p{
+    font-weight: 700;
+    opacity: 0.8;
+}
+.container-star{
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 50%;
+    font-size: 12px;
+    color: var(--Very-Dark-Magenta);
+    font-weight: 700;
+}
+.star{
+    border:none;
+    border-radius: 5px;
+    padding: 10px 35px;
+    background-color: var(--Light-Grayish-Magenta);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    width: 400px;
+}
+.star p{
+    margin: 0;
+    font-weight: 900;
+    opacity: 1;
+    color: var(--Very-Dark-Magenta);
+}
+.container-star-1{
+    align-self: flex-start;
+    
+}
+.container-star-2{
+    align-self: center;
+}
+.container-star-3{
+    align-self:flex-end;
+}
+.box{
+    background-color: var(--Very-Dark-Magenta);
+    color: var(--White);
+    padding: 1rem 2.6rem;
+    border-radius: 8px;
+    min-height: 180px;
+    width: 320px;
+    max-width: 100%;
+}
+
+.box p{
+    color: var(--White);
+    font-size: 10px;
+    opacity: 0.8;
+    margin-top:10px;
+}
+.box-first{
+    align-self: flex-start;
+    margin:0;
+}
+.box-middle{
+    align-self:center;
+}
+.header{
+    display: flex;
+   
+    align-items: flex-start;
+}
+
+.box-last{
+     align-self:flex-end;
+}
+ ul li{
+    list-style-type: none;
+    text-decoration: none;
+    line-height: 1.5;
+}
+ul{
+    margin:0;
+    padding:0;
+}
+.list-big{
+    font-weight: 700;
+     font-size: 10px;
+      opacity: 0.8;
+}
+.list-small{
+    font-weight: 400;
+    color: var(--Soft-Pink);
+    opacity: 0.7;
+    font-size: 10px;
+}
+
+.img-icon{
+    width:50%;
+    border-radius: 50%;
+
+}
+
+img{
+    max-width: 100%;
+    padding-left: 5px;
+}
+
+
+.circle-1,
+.circle-2{
+    position: absolute;
+    z-index: 2;
+}
+.circle-1{
+    left: 0;
+    top: 0;
+    /* transform: translate(-50px,-50px); */
+}
+.circle-2{
+    bottom: -120px;
+    right: 0;
+     /* transform: translate(-50px,-50px); */
+}
+/* @keyframes circle {
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translate(1);
+    }
+    
+} */
+ @media (max-width:500px){
+    body{
+         background: url(./images/bg-pattern-top-mobile.svg) no-repeat 150px 0;
+         padding:0 2rem 4rem;
+         text-align: center;      
+    } 
+  .container-flex{
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .container-content{
+        width: 100%;
+        padding: 0;
+        padding-top:5rem;
+    }
+    .star {
+        flex-direction: column;
+        align-items:center;
+        gap:10px;
+        width: 100%;
+        padding: 15px 20px;
+    
+    }
+    .star p{
+         font-size: 1rem;
+         font-weight: 900;
+    }
+    .container-star{
+        width: 100%;     
+    }
+    .container-star-1{
+        align-self: center; 
+    }
+    .container-star-2{
+        align-self: flex-end; 
+    }
+    .container-star-3{
+     align-self:center;  
+    }
+    div.star.container-star-2
+    {
+    align-self: flex-start;
+    }
+    .container-2{
+       flex-direction: column;
+       padding:1rem 0 0;
+  
+    }
+    .box{
+        align-self: center;
+        width: 100%;
+        text-align: left;
+        padding: 3rem 2.6rem;
+        min-height: 300px;
+    }
+    .box *,
+    .box p {
+        font-size: 1rem;
+    }   
+}
